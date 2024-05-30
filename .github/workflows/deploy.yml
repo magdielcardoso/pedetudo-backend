@@ -28,4 +28,4 @@ jobs:
 
       - name: "Restart PM2 services on VPS"
         run: |
-          ssh ${{ secrets.SSH_KEY_PRIVATE }}@77.37.43.196 "pm2 restart all"
+          ssh ${{ secrets.PASS_KEY }}@77.37.43.196 "pm2 restart all"
