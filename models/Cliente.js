@@ -1,4 +1,4 @@
-//CLIENTES SÃO OS CLIENTES DO RESTAURANTE/LANCHONETE
+//CLIENTES SÃO OS CLIENTES DO NEGÓCIO
 
 const { v4: uuid } = require('uuid');
 
