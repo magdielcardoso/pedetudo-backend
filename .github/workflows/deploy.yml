@@ -27,5 +27,6 @@ jobs:
           strip_components: 1
 
       - name: "Reiniciar PM2"
-        run: chmod +x ./pm2_runner.sh
-        run: bash ./pm2_runner.sh
+        run: |
+        chmod +x ./pm2_runner.sh
+        bash ./pm2_runner.sh
