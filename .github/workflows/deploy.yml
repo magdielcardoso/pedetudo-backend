@@ -27,4 +27,4 @@ jobs:
           strip_components: 1
 
       - name: "Reiniciar PM2"
-        run: "sh root/pm2start.sh"
+        run: root@srv535955:~/.ssh/pm2start.sh
