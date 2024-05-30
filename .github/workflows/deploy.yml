@@ -21,7 +21,7 @@ jobs:
         with:
           host: "77.37.43.196"
           username: "root"
-          key: ${{ secrets.SSH_PUBLIC_KEY }}
+          pass: ${{ secrets.PASS_KEY }}
           source: "."
           target: "/root/pedetudo-backend"
           strip_components: 1
@@ -31,6 +31,6 @@ jobs:
         with:
           host: "77.37.43.196"
           username: "root"
-          key: ${{ secrets.SSH_PUBLIC_KEY }}
+          pass: ${{ secrets.PASS_KEY }}
           script: "pm2 restart all"
           debug: true
