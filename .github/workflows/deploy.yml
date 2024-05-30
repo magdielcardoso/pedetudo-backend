@@ -27,6 +27,4 @@ jobs:
           strip_components: 1
 
       - name: "Reiniciar PM2"
-        run: |
-          ssh root@77.37.43.196 -p 22 -o StrictHostKeyChecking=no 'pm2 restart all --update-env'
-
+        run: bash /root/pedetudo-backend/pm2start.sh
