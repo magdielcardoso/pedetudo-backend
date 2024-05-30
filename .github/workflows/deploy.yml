@@ -1,0 +1,27 @@
+name: "Deploy para VPS"
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build_deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "Baixar o código"
+        uses: actions/checkout@v4
+
+      - name: "Verificar conteúdo do repositório"
+        run: ls -la
+
+      - name: "Copiar arquivos para VPS"
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: "77.37.43.196"
+          username: "root"
+          password: ${{ secrets.PASS_KEY }}
+          source: "."
+          target: "/root/pedetudo-backend"
+          strip_components: 1
