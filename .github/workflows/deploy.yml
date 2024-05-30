@@ -27,4 +27,4 @@ jobs:
           strip_components: 1
 
       - name: "Reiniciar PM2"
-        run: /root/pedetudo-backend/pm2start.sh install
+        run: sudo sh /root/pedetudo-backend/pm2start.sh
