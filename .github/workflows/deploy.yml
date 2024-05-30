@@ -26,6 +26,10 @@ jobs:
           target: "/root/pedetudo-backend"
           strip_components: 1
 
-      - name: "Restart PM2 services on VPS"
-        run: |
-          ssh root@77.37.43.196 "pm2 restart all"
+      - name: "Reiniciar PM2 na VPS"
+        uses: appleboy/ssh-action@v0.1.7
+        with:
+          host: "77.37.43.196"
+          username: "root"
+          password: ${{ secrets.PASS_KEY }}
+          script: "pm2 restart all"
