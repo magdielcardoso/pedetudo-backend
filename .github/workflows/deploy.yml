@@ -28,6 +28,5 @@ jobs:
 
       - name: "Reiniciar PM2"
         run: |
-              ssh root@77.37.43.196 -p 22 '
-              pm2 restart all --update-env
-              '
+          ssh root@77.37.43.196 -p 22 -o StrictHostKeyChecking=no 'pm2 restart all --update-env'
+
