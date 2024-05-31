@@ -26,5 +26,3 @@ jobs:
           target: "/root/pedetudo-backend"
           strip_components: 1
 
-      - name: "Reiniciar PM2"
-        run: sudo pm2 restart all
