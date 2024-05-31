@@ -27,4 +27,9 @@ jobs:
           strip_components: 1
 
       - name: "Reiniciar PM2"
-        run: bash /root/pedetudo-backend/pm2start.sh
+        uses: appleboy/ssh-action@v0.1.7
+        with:
+          host: "77.37.43.196"
+          username: "root"
+          password: ${{ secrets.PASS_KEY }}
+          script: "bash /root/pedetudo-backend/pm2start.sh"
