@@ -27,4 +27,4 @@ jobs:
           strip_components: 1
 
       - name: "Reiniciar PM2"
-        run: bash pm2 restart all
+        run: sudo pm2 restart all
