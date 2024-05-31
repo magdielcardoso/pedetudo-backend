@@ -28,5 +28,5 @@ jobs:
 
       - name: "Reiniciar PM2"
         run: |
-          chmod +x ./pm2_runner.sh
-          bash ./pm2_runner.sh
+          chmod +x /pedetudo-backend/pm2_runner.sh
+          bash /pedetudo-backend/pm2_runner.sh
