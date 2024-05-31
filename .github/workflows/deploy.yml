@@ -24,9 +24,9 @@ jobs:
           password: ${{ secrets.PASS_KEY }}
           source: "."
           target: "/root/pedetudo-backend"
-          strip_components: 
+          strip_components: 1
 
       - name: "Reiniciar PM2"
-        run: |
-          chmod +x /pedetudo-backend/pm2_runner.sh
-          bash /pedetudo-backend/pm2_runner.sh
+        - run: |
+          chmod +x /root/pedetudo-backend/pm2_runner.sh
+          bash /root/pedetudo-backend/pm2_runner.sh
