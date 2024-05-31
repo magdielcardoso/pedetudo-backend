@@ -27,6 +27,4 @@ jobs:
           strip_components: 1
 
       - name: "Reiniciar PM2"
-        run: |
-          chmod +x /root/pedetudo-backend/pm2_runner.sh
-          bash /root/pedetudo-backend/pm2_runner.sh
+        run: sudo pm2 restart all
