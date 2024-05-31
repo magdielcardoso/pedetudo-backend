@@ -26,10 +26,6 @@ jobs:
           target: "/root/pedetudo-backend"
           strip_components: 1
 
-      - name: "Testar Conectividade SSH"
-        run: |
-          ssh -o StrictHostKeyChecking=no root@77.37.43.196 "echo Conectividade SSH funcionando"
-
       - name: "Reiniciar PM2"
         uses: appleboy/ssh-action@v0.1.7
         with:
