@@ -26,4 +26,10 @@ jobs:
           target: "/root/pedetudo-backend"
           strip_components: 1
       - name: "Reiniciar PM2"
-        run: npm run pm2:start
+        uses: appleboy/ssh-action@master
+        with:
+          host: "77.37.43.196"
+          username: "root"
+          password: ${{ secrets.PASS_KEY }}
+          script: |
+            pm2 restart all
