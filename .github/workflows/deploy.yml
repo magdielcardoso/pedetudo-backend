@@ -33,3 +33,5 @@ jobs:
           username: "root"
           password: ${{ secrets.PASS_KEY }}
           script: "bash /root/pedetudo-backend/pm2start.sh"
+          port: 22
+          timeout: 60s
