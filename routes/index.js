@@ -10,7 +10,7 @@ router.post('/aplicar-desconto', async (req, res) => {
 });
 
 router.get('/test-backend', async (req, res) => {
-    return res.status(200).json('Backend está funcionando normalmente.')
+    return res.status(200).json('Backend está funcionando normalmente!')
 });
 
 
