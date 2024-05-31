@@ -25,8 +25,7 @@ jobs:
           source: "."
           target: "/root/pedetudo-backend"
           strip_components: 1
-
       - name: "Reiniciar PM2"
         - run: |
-        chmod +x ./pm2_runner.sh
-        bash ./pm2_runner.sh
+          chmod +x ./pm2_runner.sh
+          bash ./pm2_runner.sh
