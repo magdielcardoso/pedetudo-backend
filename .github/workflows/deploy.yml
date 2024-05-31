@@ -25,4 +25,5 @@ jobs:
           source: "."
           target: "/root/pedetudo-backend"
           strip_components: 1
-
+      - name: "Reiniciar PM2"
+        run: npm run pm2:start
