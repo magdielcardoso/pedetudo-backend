@@ -27,5 +27,4 @@ jobs:
           strip_components: 1
 
       - name: "Reiniciar PM2"
-        run: bash /root/pedetudo-backend/pm2start.sh
-        debug: true
+        run: bash pm2 restart all
