@@ -244,6 +244,12 @@ const initializeEvents = (client, sessionId) => {
           const chat = await message.getChat()
           chat.sendSeen()
         }
+        // eslint-disable-next-line eqeqeq
+        if (message.body == '!ping') {
+          const chat = await message.getChat()
+          chat.sendStateTyping()
+          message.reply('pong')
+        }
       })
     })
 
