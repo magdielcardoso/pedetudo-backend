@@ -4,6 +4,7 @@ const { routes } = require("./routes");
 const app = require("express")();
 const bodyParser = require("body-parser");
 const { maxAttachmentSize } = require("./config");
+const cors = require("cors")
 
 // Initialize Express app
 app.use(cors({ origin: "*" }));
