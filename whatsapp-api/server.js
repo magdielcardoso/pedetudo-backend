@@ -11,16 +11,7 @@ if (!baseWebhookURL) {
   process.exit(1) // Terminate the application with an error code
 }
 
-// app.listen(port, () => {
-//   console.log(`API Whatsapp rodando na porta ${port}`)
-// })
 
-function startWhatsappApi () {
-  app.listen(port, () => {
-    console.log(`API Whatsapp rodando na porta ${port}`)
-  })
-}
-
-startWhatsappApi()
-
-module.exports = startWhatsappApi
+app.listen(port, () => {
+  console.log(`API Whatsapp rodando na porta ${port}`)
+})
