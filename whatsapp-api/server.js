@@ -9,6 +9,9 @@ const port = process.env.PORT || 7070;
 const httpServer = http.createServer(app);
 const io = socket(httpServer, {
   path: "/socket.io",
+  cors: {
+    origin: "*",
+  },
 });
 
 // Check if BASE_WEBHOOK_URL environment variable is available
