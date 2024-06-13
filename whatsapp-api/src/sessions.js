@@ -209,6 +209,8 @@ const initializeEvents = (client, sessionId) => {
   checkIfEventisEnabled("authenticated").then((_) => {
     client.on("authenticated", () => {
       triggerWebhook(sessionWebhook, sessionId, "authenticated");
+      const io = require("../server").io;
+      io.emit("whatsapp_authenticated", { sessionId });
     });
   });
 
