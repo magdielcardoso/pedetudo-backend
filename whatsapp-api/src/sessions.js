@@ -210,7 +210,9 @@ const initializeEvents = (client, sessionId) => {
   checkIfEventisEnabled("authenticated").then((_) => {
     client.on("authenticated", () => {
       triggerWebhook(sessionWebhook, sessionId, "authenticated");
-      io.emit("whatsapp_authenticated", "Conectado!");
+      io.on("whatsapp", () => {
+        io.emit("whatsapp_authenticated", "Conectado!");
+      })
     });
   });
 

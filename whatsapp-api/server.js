@@ -13,7 +13,7 @@ const io = socket(httpServer, {
     origin: "*",
   },
 });
-
+module.exports = io
 // Check if BASE_WEBHOOK_URL environment variable is available
 if (!baseWebhookURL) {
   console.error(
