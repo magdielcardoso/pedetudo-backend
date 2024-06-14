@@ -15,6 +15,7 @@ const {
   waitForNestedObject,
   checkIfEventisEnabled,
 } = require("./utils");
+const io = require("../server");
 
 // Function to validate if the session is ready
 const validateSession = async (sessionId) => {
@@ -209,8 +210,7 @@ const initializeEvents = (client, sessionId) => {
   checkIfEventisEnabled("authenticated").then((_) => {
     client.on("authenticated", () => {
       triggerWebhook(sessionWebhook, sessionId, "authenticated");
-      const io = require("../server").io;
-      io.emit("whatsapp_authenticated", { sessionId });
+      io.emit("whatsapp_authenticated", "Conectado!");
     });
   });
 
